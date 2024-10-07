@@ -1,148 +1,183 @@
-<span style="font-family: verdana, geneva, sans-serif;">
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Chart.js Link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="employee.css" />
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                    <img src="img/Dyanmic-logo.png" alt="logo">
+                    <span class="nav-item">Dynamic</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Home</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Profile</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-wallet"></i>
+                    <span class="nav-item">Wallet</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-item">Analytics</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-tasks"></i>
+                    <span class="nav-item">Tasks</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Settings</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Help</span>
+                </a></li>
+                <li><a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+        </nav>
 
-    <head>
-        <meta charset="UTF-8" />
-        <title>Dashboard | By Code Info</title>
-        <link rel="stylesheet" href="employee.css" />
-        <!-- Font Awesome Cdn Link -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    </head>
+        <section class="main">
+            <div class="main-top">
+                <h1>Skills</h1>
+                <img src="img/person.png" alt="Person">
+            </div>
 
-    <body>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#" class="logo">
-                            <img src="img/Dyanmic-logo.png" alt="">
-                            <span class="nav-item">Dynamic</span>
-                        </a></li>
-                    <li><a href="#">
-                            <i class="fas fa-home"></i>
-                            <span class="nav-item">Home</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-user"></i>
-                            <span class="nav-item">Profile</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-wallet"></i>
-                            <span class="nav-item">Wallet</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-chart-bar"></i>
-                            <span class="nav-item">Analytics</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-tasks"></i>
-                            <span class="nav-item">Tasks</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-cog"></i>
-                            <span class="nav-item">Settings</span>
-                        </a></li>
-                    <li><a href="">
-                            <i class="fas fa-question-circle"></i>
-                            <span class="nav-item">Help</span>
-                        </a></li>
-                    <li><a href="" class="logout">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <span class="nav-item">Log out</span>
-                        </a></li>
-                </ul>
-            </nav>
-
-            <section class="main">
-                <div class="main-top">
-                    <h1>Skills</h1>
-                    <img src="img/person.png" alt="">
+            <div class="main-skills">
+                <div class="card">
+                    <h3>You</h3>
+                    <h4>Front-End</h4>
+                    <div class="circle-container">
+                        <svg class="progress-circle" width="100" height="100">
+                            <circle class="background-circle" cx="50" cy="50" r="45"></circle>
+                            <circle class="foreground-circle" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">0%</div>
+                    </div>
+                    <div class="project-label">Projects Assigned</div>
                 </div>
-                <div class="main-skills">
-                    <div class="card">
-                        <h3>You</h3>
-                        <h4>Front-End</h4>
-                        <!-- Circular Progress Bar -->
-                        <div class="circle-container">
-                            <svg class="progress-circle" width="100" height="100">
-                              <!-- Background circle -->
-                              <circle class="background-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                              <!-- Foreground circle (animated) -->
-                              <circle class="foreground-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                            </svg>
-                            <div class="progress-text">0</div>
-                          </div>
-                          
-                        <div class="project-label">Projects Assigned</div>
+                <div class="card">
+                    <h3>Gaurav</h3>
+                    <h4>Back-End</h4>
+                    <div class="circle-container">
+                        <svg class="progress-circle" width="100" height="100">
+                            <circle class="background-circle" cx="50" cy="50" r="45"></circle>
+                            <circle class="foreground-circle" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">0%</div>
                     </div>
-                    <div class="card">
-                        <h3>Agam</h3>
-                        <h4>Back-End</h4>
-                        <!-- Circular Progress Bar -->
-                        <div class="circle-container">
-                            <svg class="progress-circle" width="100" height="100">
-                              <!-- Background circle -->
-                              <circle class="background-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                              <!-- Foreground circle (animated) -->
-                              <circle class="foreground-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                            </svg>
-                            <div class="progress-text">0</div>
-                          </div>
-                          
-                        <div class="project-label">Projects Assigned</div>
-                    </div>
-                    <div class="card">
-                        <h3>Gaurav</h3>
-                        <h4>Database</h4>
-                        <!-- Circular Progress Bar -->
-                        <div class="circle-container">
-                            <svg class="progress-circle" width="100" height="100">
-                              <!-- Background circle -->
-                              <circle class="background-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                              <!-- Foreground circle (animated) -->
-                              <circle class="foreground-circle" cx="50" cy="50" r="45"></circle> <!-- radius set to 45 -->
-                            </svg>
-                            <div class="progress-text">0</div>
-                          </div>
-                          
-                        <div class="project-label">Projects Assigned</div>
-                    </div>
+                    <div class="project-label">Projects Assigned</div>
                 </div>
+                <div class="card">
+                    <h3>Agam</h3>
+                    <h4>Database</h4>
+                    <div class="circle-container">
+                        <svg class="progress-circle" width="100" height="100">
+                            <circle class="background-circle" cx="50" cy="50" r="45"></circle>
+                            <circle class="foreground-circle" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-text">0%</div>
+                    </div>
+                    <div class="project-label">Projects Assigned</div>
+                </div>
+            </div>
 
-                <section class="main-course">
-                    <h1>My Tasks</h1>
-                    <div class="course-box">
-                        <ul>
-                            <li class="active">In progress</li>
-                            <li>Pending</li>
-                            <li>Queued</li>
-                        </ul>
-                        <div class="course">
-                            <div class="box">
-                                <h3>Cafe</h3>
-                                <p>80% - progress</p>
-                                <button>continue</button>
-                                <i class="fab fa-html5 html"></i>
-                            </div>
-                            <div class="box">
-                                <h3>Cafe</h3>
-                                <p>50% - progress</p>
-                                <button>continue</button>
-                                <i class="fab fa-css3-alt css"></i>
-                            </div>
-                            <div class="box">
-                                <h3>E-commerce</h3>
-                                <p>30% - progress</p>
-                                <button>continue</button>
-                                <i class="fab fa-js-square js"></i>
-                            </div>
+            <div class="graph-container">
+                <canvas id="progressGraph" width="400" height="200"></canvas>
+            </div>
+
+            <section class="main-course">
+                <h1>My Tasks</h1>
+                <div class="course-box">
+                    <ul>
+                        <li class="active">In progress</li>
+                        <li>Pending</li>
+                        <li>Queued</li>
+                    </ul>
+                    <div class="course">
+                        <div class="box">
+                            <h3>Cafe</h3>
+                            <p>80% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-html5 html"></i>
+                        </div>
+                        <div class="box">
+                            <h3>Cafe</h3>
+                            <p>50% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-css3-alt css"></i>
+                        </div>
+                        <div class="box">
+                            <h3>E-commerce</h3>
+                            <p>30% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-js-square js"></i>
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
-        </div>
-        <script src="employee.js"></script>
-    </body>
+        </section>
+    </div>
 
-    </html>
-</span>
+    <script>
+        // Circle Progress Bar Animation
+        document.querySelectorAll('.progress-circle').forEach((circle, index) => {
+            let progress = [70, 50, 40]; // Example progress values for You, Gaurav, Agam
+            let radius = circle.querySelector('.foreground-circle').r.baseVal.value;
+            let circumference = 2 * Math.PI * radius;
+            circle.querySelector('.foreground-circle').style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.querySelector('.foreground-circle').style.strokeDashoffset = circumference - (progress[index] / 100) * circumference;
+            circle.parentElement.querySelector('.progress-text').textContent = `${progress[index]}%`;
+        });
+
+        // Chart.js Graph
+        var ctx = document.getElementById('progressGraph').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'], // X-axis labels (Years)
+                datasets: [{
+                    label: 'Progress Percentage',
+                    data: [30, 45, 60, 75, 90], // Y-axis data (Increment in Percentage)
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Years'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Percentage Increment'
+                        },
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

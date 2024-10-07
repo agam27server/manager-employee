@@ -13,6 +13,7 @@
             position: relative;
             display: inline-block;
             margin-right: 20px;
+            cursor: pointer;
         }
 
         .circle {
@@ -37,6 +38,11 @@
 
         .calendar {
             margin-top: 10px;
+            display: none;
+        }
+
+        .calendar.active {
+            display: block;
         }
 
         .calendar-days {
@@ -65,6 +71,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
@@ -114,6 +121,7 @@
                         <p>Revenue This Month</p>
                     </div>
                 </div>
+
                 <div class="user-table">
                     <div class="user-row header">
                         <div class="id">ID</div>
@@ -124,6 +132,7 @@
                         <div class="role">ROLE</div>
                     </div>
 
+                    <!-- Example User Row -->
                     <div class="user-row">
                         <div class="id">#01</div>
                         <div class="name">
@@ -145,7 +154,6 @@
                         </div>
                         <div class="role"><a href="#">Edit</a></div>
                     </div>
-
                     <div class="user-row">
                         <div class="id">#02</div>
                         <div class="name">
@@ -293,6 +301,13 @@
                     day.innerText = i;
                     calendarDaysContainer.appendChild(day);
                 }
+
+                // Add click event listener to toggle calendar visibility
+                const circleSvg = attendance.querySelector('svg.circle');
+                circleSvg.addEventListener('click', function () {
+                    const calendarDiv = attendance.querySelector('.calendar');
+                    calendarDiv.classList.toggle('active');  // Toggle 'active' class to show/hide calendar
+                });
             });
         }
 

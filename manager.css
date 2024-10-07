@@ -234,11 +234,13 @@ header {
 }
 
 .status .red {
-    background-color: #e74c3c;
+    background-color: #ce6559;
+    color: rgb(81, 7, 7);
 }
 
 .status .green {
-    background-color: #27ae60;
+    background-color: rgb(125, 193, 113);
+    color: #0a5a03;
 }
 
 .role a {
@@ -302,13 +304,18 @@ header {
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
     border-radius: 5px;
     padding: 10px;
     display: none;
     z-index: 1;
-    width: 180px; /* Adjust width as needed */
+    width: 180px;
+    text-align: center;
+}
+
+.attemdance{
+    margin: 0px 52px;
 }
 
 .user-row .role:hover .attendance {
